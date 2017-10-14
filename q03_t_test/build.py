@@ -5,4 +5,12 @@ import pandas as pd
 df = pd.read_csv('data/house_pricing.csv')
 
 # Enter Code Here
-
+def t_statistic(df):
+    alpha=0.05
+    fil1=df['Neighborhood']=='OldTown'
+    newdf=df.loc[fil1,'GrLivArea']
+    s,p_value=stats.ttest_1samp(newdf,df.loc[:,'GrLivArea'].mean())
+   # print ("s= ",s)
+    #print("p is ",type(p_value))
+    result=p_value<alpha
+    return p_value,result
