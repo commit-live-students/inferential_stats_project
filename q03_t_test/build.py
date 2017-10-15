@@ -9,7 +9,7 @@ def t_statistic(df):
                  popmean= df['GrLivArea'].mean())  # Pop mean
     p_value = res[1]
     if p_value < 0.1:
-        test_res=False
-    else:
         test_res=True
-    return p_value,np.bool_(test_res)
+    else:
+        test_res=False
+    return float(p_value),np.bool_(test_res)
