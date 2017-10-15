@@ -5,14 +5,14 @@ import scipy.stats as stats
 import pandas as pd
 
 df = pd.read_csv('data/house_pricing.csv')
-
-def confidence_interval(df):
-    sample = df['GrLivArea']
+sample = df['GrLivArea']
+def confidence_interval(sample):
     sample_mean=sample.mean()
-    z_value=stats.norm.ppf(0.90)
+    #z_value=stats.norm.ppf(q=0.90)
+    z_value=1.645
     pop_stdev=sample.std()
 # Write your solution here :
-    std_err=pop_stdev/math.sqrt(len(sample))
+    std_err=(pop_stdev/(math.sqrt(len(sample))))
     low_limit=sample_mean-(z_value*std_err)
     upp_limit=sample_mean+(z_value*std_err)
     return float(low_limit), float(upp_limit)
