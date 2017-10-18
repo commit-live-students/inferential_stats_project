@@ -1,1 +1,0 @@
-{"stats": {"passes": 1, "skipped": 0, "encoding": "UTF-8", "errors": 0, "failures": 0, "total": 1}, "results": [{"classname": "inferential_stats_project.q01_cond_prob.tests.test_q01_cond_prob:TestCond_prob", "type": "success", "name": "test_cond_prob", "time": 0.0057621002197265625}]}
