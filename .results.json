@@ -1,0 +1,1 @@
+{"stats": {"passes": 1, "skipped": 0, "encoding": "UTF-8", "errors": 0, "failures": 0, "total": 1}, "results": [{"classname": "inferential_stats_project.q03_t_test.tests.test_q03_t_test:TestTTest", "type": "success", "name": "test_t_test", "time": 0.0017659664154052734}]}
