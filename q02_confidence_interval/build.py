@@ -3,6 +3,7 @@
 import math
 import scipy.stats as stats
 import pandas as pd
+import numpy as np
 
 df = pd.read_csv('data/house_pricing.csv')
 sample = df['GrLivArea']
@@ -21,5 +22,3 @@ def confidence_interval(sample):
     low=mean-est
     high=mean+est
     return low,high
-
-confidence_interval(sample)
