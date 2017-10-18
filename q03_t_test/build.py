@@ -18,7 +18,6 @@ def t_statistic(df):
 
     # When a P value is less than or equal to the significance level, you reject the null hypothesis
     if p_value <= significance_level  :
-        print 2
         # Reject null
         reject_null = True
     else:
