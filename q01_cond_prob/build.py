@@ -6,4 +6,9 @@ import pandas as pd
 df = pd.read_csv('data/house_pricing.csv')
 
 # Enter Code Here
-
+def cond_prob(df):
+    OT = df[df['Neighborhood']=='OldTown']
+    a = len(OT['Neighborhood'])
+    b = len(df['Neighborhood'])
+    CP = (a/b)*((a-1)/(b-1))*((a-2)/(b-2))
+    return CP
