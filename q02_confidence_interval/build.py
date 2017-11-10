@@ -8,3 +8,8 @@ sample = df['GrLivArea']
 
 
 # Write your solution here :
+
+
+
+
+
