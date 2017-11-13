@@ -1,6 +1,6 @@
 from unittest import TestCase
 from ..build import chi_square
-from inspect import getfullargspec
+from inspect import getargspec
 import pandas as pd
 import numpy
 
@@ -11,10 +11,9 @@ class TestChi2_test(TestCase):
     def test_chi2_test(self):
 
         # Input parameters tests
-        args = getfullargspec(chi_square).args
-        args_default = getfullargspec(chi_square).defaults
-        self.assertEqual(len(args), 1, "Expected arguments %d, Given %d" % (1, len(args)))
-        self.assertEqual(args_default, None, "Expected default values do not match given default values")
+        args = getargspec(chi_square)
+        self.assertEqual(len(args[0]), 1, "Expected arguments %d, Given %d" % (1, len(args[0])))
+        self.assertEqual(args[3], None, "Expected default values do not match given default values")
 
         # Return type tests
         pval, result = chi_square(df)
