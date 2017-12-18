@@ -10,7 +10,7 @@ In the class we calculated the confidence interval for `SalePrice`, lets try and
 where sigma is the sample standard deviation
 
 ## Write a function `confidence_interval()` that
-* Calculates the 90% confidence interval for `GrLivArea` considering the dataset as sample.
+* Calculates the 95% confidence interval for `GrLivArea` considering the dataset as sample.
 
 ### Parameters:
 
