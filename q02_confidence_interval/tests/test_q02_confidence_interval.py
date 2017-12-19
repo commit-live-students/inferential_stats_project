@@ -25,11 +25,11 @@ class TestConfidence_interval(TestCase):
 
     def test_confidence_interval_result_low_values(self):  # Return value tests
         low, high = confidence_interval(sample)
-        self.assertEqual(low, 1492.8429310773924,"Return `Confidence Interval` value does not \
+        self.assertAlmostEquals(low, 1492.8429310773924, 3, "Return `Confidence Interval` value does not \
         match expected value")
 
     def test_confidence_interval_result_hugh_values(self):
         low, high = confidence_interval(sample)
-        self.assertEqual(high, 1538.0844661828817, "Return `Confidence Interval` value does not \
+        self.assertAlmostEquals(high, 1538.0844661828817, 3, "Return `Confidence Interval` value does not \
         match expected value")
 
