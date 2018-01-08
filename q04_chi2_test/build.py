@@ -13,6 +13,6 @@ def chi_square(data):
     # print freqtab
     chi2,pval,dof,expected = stats.chi2_contingency(freqtab)
     test_result = chi2 > 5
-    return test_result, pval
+    return float(pval), test_result
 
-print chi_square(df)
+# print chi_square(df)
