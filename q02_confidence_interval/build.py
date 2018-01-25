@@ -11,4 +11,5 @@ sample = df['GrLivArea']
 def confidence_interval(sample):
 
     size, _, mean, var, _, _ = stats.describe(sample)
-    return stats.norm.interval(0.9, loc=mean, scale=math.sqrt(var / size))
+    confidence=stats.norm.interval(0.9, loc=mean, scale=math.sqrt(var / size))
+    return confidence
