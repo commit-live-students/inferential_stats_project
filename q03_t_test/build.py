@@ -11,7 +11,3 @@ def t_statistic(data):
 
 print t_statistic(data)
 
-# Enter Code Here
-
-
-
