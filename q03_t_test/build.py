@@ -6,4 +6,7 @@ df = pd.read_csv('data/house_pricing.csv')
 
 
 # Enter Code Here
-
+def t_statistic(df):
+    from statsmodels.stats.weightstats import ztest
+    t=stats.ttest_1samp(a=df[df['Neighborhood'] == 'OldTown']['GrLivArea'], popmean=df['GrLivArea'].mean())
+    return t[1],t[1]<0.1
