@@ -7,6 +7,7 @@ df = pd.read_csv('data/house_pricing.csv')
 
 
 # Enter Code Here
-
-
-
+def cond_prob(df):
+    n = df[df['Neighborhood'] == 'OldTown'].shape[0]
+    d = df['Neighborhood'].shape[0]
+    return ((n/d)*((n-1)/(d-1))*((n-2)/(d-2)))
