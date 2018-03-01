@@ -11,9 +11,10 @@ def t_statistic(df):
                                               == 'OldTown']['GrLivArea'], \
                                               df['GrLivArea'].mean())
 
-    if (p_value < 0.1):
-        test_result = np.bool_(True)
-    else :
+    # If pval > alpha, the hypothesis is never rejected
+    if (p_value > 0.1):
         test_result = np.bool_(False)
+    else :
+        test_result = np.bool_(True)
 
     return p_value, test_result
