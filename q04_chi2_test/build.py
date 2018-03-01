@@ -5,30 +5,6 @@ import numpy as np
 
 df = pd.read_csv('data/house_pricing.csv')
 
-def compute_freq_chi2(x,y):
-    """This function will compute frequency table of x an y
-    Pandas Series, and use the table to feed for the contigency table
-
-    Parameters:
-    -------
-    x,y : Pandas Series, must be same shape for frequency table
-
-    Return:
-    -------
-    None. But prints out frequency table, chi2 test statistic, and
-    p-value
-    """
-    freqtab = pd.crosstab(x,y)
-    #print("Frequency table")
-    #print("============================")
-    #print(freqtab)
-    #print("============================")
-
-    #print("ChiSquare test statistic: ",chi2)
-    #print("p-value: ",pval)
-    return chi2, pval
-
-
 def chi_square(df):
 
     sale_prcie = df['SalePrice']
