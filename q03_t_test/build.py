@@ -12,9 +12,9 @@ def t_statistic(df):
                                               df['GrLivArea'].mean())
 
     # If pval > alpha, the hypothesis is never rejected
-    if (p_value > 0.1):
-        test_result = np.bool_(False)
-    else :
+    if (p_value > 0.9):
         test_result = np.bool_(True)
+    else :
+        test_result = np.bool_(False)
 
     return p_value, test_result
