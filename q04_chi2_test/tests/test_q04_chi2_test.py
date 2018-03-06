@@ -1,6 +1,6 @@
 from unittest import TestCase
 from ..build import chi_square
-from inspect import getargspec
+from inspect import getfullargspec
 import pandas as pd
 import numpy
 
@@ -10,11 +10,11 @@ df = pd.read_csv('data/house_pricing.csv')
 class TestChi2_test(TestCase):
     
     def test_chi2_test(self):   # Input parameters tests
-        args = getargspec(chi_square)
+        args = getfullargspec(chi_square)
         self.assertEqual(len(args[0]), 1, "Expected arguments %d, Given %d" % (1, len(args[0])))
 
     def test_chi2_test_default(self):  # Input parameters default tests
-        args = getargspec(chi_square)
+        args = getfullargspec(chi_square)
         self.assertEqual(args[3], None, "Expected default values do not match given default values")
 
     def test_chi2_test_result_type(self):  # Return type tests
