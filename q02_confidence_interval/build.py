@@ -12,4 +12,4 @@ def confidence_interval(df):
     se = sample.std()/math.sqrt((sample.shape[0]))
     z = stats.norm.ppf(q = 0.95)
     estimate = z * se
-    return sample.mean - estimate, sample.mean + estimate
+    return sample.mean() - estimate, sample.mean() + estimate
