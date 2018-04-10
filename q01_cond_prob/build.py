@@ -7,6 +7,8 @@ df = pd.read_csv('data/house_pricing.csv')
 
 
 # Enter Code Here
-
-
-
+def cond_prob(data):
+    all_houses = data.shape[0]
+    houses_in_OldTown = data[data['Neighborhood'] == 'OldTown'].shape[0]
+    con_prob =  ((houses_in_OldTown/all_houses) * ((houses_in_OldTown-1)/(all_houses-1)) * ((houses_in_OldTown-2)/(all_houses-2)))
+    return con_prob
