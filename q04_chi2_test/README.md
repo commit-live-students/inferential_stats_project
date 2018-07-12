@@ -6,7 +6,7 @@ Perform a chi-square test to test independence of variables `LandSlope` and `Sal
 * Returns the p-value
 * The Boolean result of Chi2-test
 
-** Note - Use pandas qcut function to divide `SalePrice` into three equidistant categories - High, medium, low **
+**Note - Use pandas qcut function to divide `SalePrice` into three equidistant categories - High, medium, low**
 
 ### Parameters:
 
