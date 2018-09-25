@@ -2,6 +2,7 @@
 # Default imports
 import scipy.stats as stats
 import pandas as pd
+import numpy as np
 
 df = pd.read_csv('data/house_pricing.csv')
 
@@ -16,9 +17,9 @@ def chi_square(df):
     z_value=stats.chi2.ppf(q=0.95,df=2)
     print(z_value)
     if(pval>z_value):
-        return True,pval
+        return pval,np.True_
     else:
-        return False,pval
+        return pval,np.False_
 chi_square(df)
 
 
