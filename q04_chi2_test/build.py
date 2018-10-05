@@ -9,7 +9,7 @@ df = pd.read_csv('data/house_pricing.csv')
 
 
 
-# 
+ 
 # Enter Code Here
 def chi_square(df):
     SalesPrice = pd.qcut(df['SalePrice'], 3, labels=['High','medium','low'])
