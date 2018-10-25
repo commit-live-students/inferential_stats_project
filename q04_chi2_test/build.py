@@ -7,17 +7,11 @@ df = pd.read_csv('data/house_pricing.csv')
 
 # Enter Code Here
 def chi_square(df):
-    price = pd.qcut(df['SalePrice'], 3, labels = ['High', 'Medium', 'low'])
+    price = pd.qcut(df['SalePrice'], 3, labels = ['High', 'Medium', 'Low'])
     freqtab = pd.crosstab(df['LandSlope'],price)
     chi2,pval,dof,expected = stats.chi2_contingency(freqtab)
-    
-    if pval < .05 :
-        test_result =True
-    else :
-         test_result =False
-        
-    
-    return pval , test_result
+       
+    return pval , pval < .05
     
 
 
