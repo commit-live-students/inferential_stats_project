@@ -12,18 +12,19 @@ def t_statistic(df):
     # alpha 0.10 for 90% significance level, its means 10% risk
     alpha = 0.10
     t_test, p_value = stats.ttest_1samp(df[df['Neighborhood' ]=='OldTown']['GrLivArea'], df['GrLivArea'].mean())
-    if p_value < alpha:
-        return  p_value, np.bool_(False)
     
+    if p_value < alpha:
+       
+        return  p_value, np.bool_(True)
     else:
         
-        return  p_value, np.bool_(True)
+         return  p_value, np.bool_(False)
 
 
-type(t_statistic(df)[1])
-np.bool(False)
-type(np.bool(False))
-type(np.bool_(False))
+t_statistic(df)
+
+
+
 
 
 
