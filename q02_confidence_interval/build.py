@@ -12,9 +12,9 @@ def confidence_interval(n):
     n = sample.size
     sample_mean = sample.mean()
 
-    z_critical = stats.norm.ppf(q = 0.95)  # Get the z-critical value*
+    z_critical = stats.norm.ppf(q = 0.95)  
 
-    print('z-critical value:')              # Check the z-critical value
+    print('z-critical value:') 
     print(z_critical)                        
 
     Std_Error = (sample.std())/math.sqrt(n)
