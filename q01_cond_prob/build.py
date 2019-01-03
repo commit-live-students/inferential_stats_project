@@ -10,11 +10,8 @@ df = pd.read_csv('data/house_pricing.csv')
 # Enter Code Here
 def cond_prob(df):
 
-    # number of ho
     total_house_in_oldtown = len(df[df['Neighborhood']== 'OldTown']) # number of house in oldtown
-    total_house = len(df)  # total number of house
-
-    #calculate conditional probability 
+    total_house = len(df)  
     cond_probability = ((total_house_in_oldtown)/(total_house))*((total_house_in_oldtown-1)/(total_house-1)) * ((total_house_in_oldtown-2)/(total_house-2))
 
     return cond_probability
